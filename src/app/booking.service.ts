@@ -35,7 +35,7 @@ export class BookingService {
   }
 
   getTotal() : number {
-    return this.cart.reduce((acc, ele) => acc + ele.price, 0);
+    return this.cart.reduce((a, b) => a + b.price, 0);
   }
 
 }
