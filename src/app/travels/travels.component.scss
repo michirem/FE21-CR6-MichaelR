@@ -1,0 +1,24 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    background-image: url("https://images.unsplash.com/photo-1437846972679-9e6e537be46e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=3151&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 400px;
+}
+
+.offerhero {
+    height: 250px;
+    text-shadow: 1px 0px 1px rgba(150, 150, 150, 1);
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}

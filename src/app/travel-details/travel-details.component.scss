@@ -1,0 +1,15 @@
+header {
+    background-color: rgb(0, 88, 219);
+}
+
+.offerhero {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    img {
+        width: 100%;
+        position: absolute;
+        top: -80%;
+        left: 0%;
+    }
+}

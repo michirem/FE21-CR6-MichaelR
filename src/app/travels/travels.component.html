@@ -1,8 +1,24 @@
-<header>
+<header class="mb-3">
     <div class="container">
         <navigation></navigation>
         <div class="offerhero align-items-center justify-content-center d-flex flex-column heroSection">
-            <h1 class="text-center text-light">Inspiration & Curiosity</h1>
+            <h1 class="text-center text-light">You choose<br>We do the rest</h1>
+            <h3 class="text-center text-light">Your journey begins here!</h3>
         </div>
     </div>
 </header>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div *ngFor="let trip of trips; index as travelId" class="col">
+          <div class="card">
+            <img src="{{trip.image}}" class="card-img-top" alt="tripimage">
+            <div class="card-body">
+              <h5 class="card-title">{{trip.destination}}</h5>
+              <p class="card-text">Date: {{trip.date}}<br>Duration: {{trip.duration}} Days</p>
+              <p class="card-text">Price: {{trip.price}} €</p>
+              <a class="btn btn-primary btn-outline-light" routerLink="{{travelId}}">Details</a>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

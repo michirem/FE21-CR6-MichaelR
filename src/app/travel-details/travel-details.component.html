@@ -1,1 +1,25 @@
-<p>travel-details works!</p>
+<header class="mb-3">
+    <div class="container">
+        <navigation></navigation>
+        <div class="offerhero align-items-center justify-content-center d-flex flex-column heroSection">
+            <img src="{{oneTrip.image}}">
+        </div>
+    </div>
+</header>
+<div class="container">
+    <a class="btn btn-primary mb-3" routerLink="/travels"><i class="fas fa-arrow-left"></i> Back to our Trips</a> 
+<div class="row">
+    <div class="col-8">
+        <p>{{oneTrip.destination}}</p>
+        <p>Date: {{oneTrip.date}}</p>
+        <p>Duration: {{oneTrip.duration}} Days</p>
+        <p>Price: {{oneTrip.price}} EUR</p>
+    </div>
+    <div class="col-12">
+        <p>{{oneTrip.details}}</p>
+    </div>
+    <div class="col">
+        <!-- <input class="btn btn-success" type="button" value="Add to cart" (click)="addToCart()"> -->
+    </div>
+</div>
+</div>

@@ -12,7 +12,7 @@ export const trips : Array<journey> = [
     "image": "https://images.unsplash.com/photo-1513415277900-a62401e19be4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80",
   "destination": "Mauritius",
   "date": "2021/09/24",
-  "duration": 1,
+  "duration": 25,
   "details": "Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat.",
   "price": 5650
 }, {
@@ -54,7 +54,7 @@ export const trips : Array<journey> = [
     "image": "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80",
   "destination": "China",
   "date": "2021/03/26",
-  "duration": 2,
+  "duration": 21,
   "details": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.",
   "price": 7086
 }, {
