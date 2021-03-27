@@ -8,52 +8,68 @@
 </header>
 <main>
     <div class="container">
-<ng-template [ngIf]="cart.length > 0" [ngIfElse]="empty">
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Amount</th>
-            <th></th>
-            <th>Product</th>
-            <th>Price</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let trip of cart">
-            <th scope="row"> 1
-            </th>
-            <td><img class="img-thumbnail" src="{{trip.image}}" alt=""></td>
-            <td>{{trip.destination}}</td>
-            <td>{{trip.price}} EUR</td>
-        </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th></th>
-                <td></td>
-                <td></td>
-                <td>{{cartTotal.toFixed(2)}} EUR</td>
-            </tr>
-        </tfoot>
-    </table>
-    <div class="d-flex justify-content-center">
-        <div class="p-2">
-            <a class="btn btn-primary" routerLink=""><i class="fas fa-arrow-left"></i> Back to the Store</a>        
-        </div>
-        <div class="p-2">
-            <a class="btn btn-primary" routerLink="">Continue with Checkout <i class="fas fa-arrow-right"></i></a> 
-        </div>
+        <ng-template [ngIf]="cart.length > 0" [ngIfElse]="empty">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Amount</th>
+                    <th></th>
+                    <th>Trip</th>
+                    <th>Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let trip of cart">
+                    <th scope="row"> 1
+                    </th>
+                    <td><img class="img-thumbnail" src="{{trip.image}}" alt=""></td>
+                    <td>{{trip.destination}}</td>
+                    <td>{{trip.price}} EUR</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <td>
+                            <ng-template [ngIf]="cartTotal < 200" [ngIfElse]="nodiscount">Apply for a 10% discount if you book a total of 200 EUR or more!</ng-template>
+                            <ng-template #nodiscount></ng-template>
+                        </td>
+                        <td>
+                            <ng-template [ngIf]="cartTotal > 200 && cartTotal < 500" [ngIfElse]="discount1">You apply for a 10% discount!</ng-template>
+                            <ng-template #discount1></ng-template>
+                            <ng-template [ngIf]="cartTotal > 500" [ngIfElse]="discount2">You apply for a 20% discount!</ng-template>
+                            <ng-template #discount2></ng-template>
+                        </td>
+                        <td>
+                            <ng-template [ngIf]="cartTotal < 200" [ngIfElse]="discountsum1">{{cartTotal.toFixed(2)}} EUR</ng-template>
+                            <ng-template #discountsum1></ng-template>
+                            <ng-template [ngIf]="cartTotal > 200 && cartTotal < 500" [ngIfElse]="discountsum2">{{cartTotalDiscounted.toFixed(2)}} EUR</ng-template>
+                            <ng-template #discountsum2></ng-template>
+                            <ng-template [ngIf]="cartTotal > 500" [ngIfElse]="discountsum3">{{cartTotalDiscounted.toFixed(2)}} EUR</ng-template>
+                            <ng-template #discountsum3></ng-template>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="d-flex justify-content-center">
+                <div class="p-2">
+                    <a class="btn btn-primary" routerLink="/travels"><i class="fas fa-arrow-left"></i> Back to the Store</a>        
+                </div>
+                <div class="p-2">
+                    <a class="btn btn-primary" routerLink="">Continue with Checkout <i class="fas fa-arrow-right"></i></a> 
+                </div>
+            </div>
+        </ng-template>
+        <ng-template #empty> 
+            <div class="d-flex justify-content-center mt-5">
+                <a class="btn btn-primary" routerLink="/travels"><i class="fas fa-arrow-left"></i> Back to the Store</a>   
+            </div>
+            <div class="d-flex flex-column align-items-center mt-2">
+                <h1>
+                    Your cart is empty
+                </h1>
+                <p>10% Discount if your total is 200 - 500 EUR<br>20% Discount if your total is 500 EUR or more!</p>
+            </div>   
+        </ng-template>
     </div>
-</ng-template>
-<ng-template #empty> 
-    <div class="d-flex justify-content-center mt-5">
-        <a class="btn btn-primary" routerLink="/travels"><i class="fas fa-arrow-left"></i> Back to the Store</a>   
-    </div>
-    <div class="d-flex justify-content-center mt-2">
-        <h1>
-Your cart is empty
-    </h1>
-</div>   
-</ng-template>
-</div>
 </main>
