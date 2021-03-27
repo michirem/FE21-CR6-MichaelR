@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { journey } from '../interfaces';
+import { BookingService } from '../booking.service';
 
 @Component({
   selector: 'cart',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
+  cart: Array<journey> = [];
+  cartTotal: number = 0;
+
+  constructor(private bookingService: BookingService) { }
 
   ngOnInit(): void {
-  }
-
+    this.cart = this.bookingService.getTripsCart();
+    this.cartTotal = this.bookingService.getTotal();
+}
 }

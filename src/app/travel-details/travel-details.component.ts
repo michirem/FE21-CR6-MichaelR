@@ -27,4 +27,7 @@ export class TravelDetailsComponent implements OnInit {
     return this.bookingService.getTrips()[index];
   }
 
+  addToCart(): void {
+    this.bookingService.addTrip(this.oneTrip);
+  }
 }

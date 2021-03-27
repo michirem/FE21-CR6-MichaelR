@@ -1,0 +1,22 @@
+header {
+    background-image: url("https://images.unsplash.com/photo-1561131668-f63504fc549d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3139&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 400px;
+}
+
+.carthero {
+    height: 250px;
+    text-shadow: 1px 0px 1px rgba(150, 150, 150, 1);
+    h1 {
+        background-color: white;
+        padding: 15px;
+        border-radius: 15px;
+    }
+}
+
+.img-thumbnail {
+    width: 60%;
+}

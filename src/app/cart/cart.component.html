@@ -1,1 +1,59 @@
-<p>cart works!</p>
+<header>
+    <div class="container">
+        <navigation></navigation>
+        <div class="carthero align-items-center justify-content-center d-flex flex-column heroSection">
+            <h1 class="text-center">Departure</h1>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container">
+<ng-template [ngIf]="cart.length > 0" [ngIfElse]="empty">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Amount</th>
+            <th></th>
+            <th>Product</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let trip of cart">
+            <th scope="row"> 1
+            </th>
+            <td><img class="img-thumbnail" src="{{trip.image}}" alt=""></td>
+            <td>{{trip.destination}}</td>
+            <td>{{trip.price}} EUR</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th></th>
+                <td></td>
+                <td></td>
+                <td>{{cartTotal.toFixed(2)}} EUR</td>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="d-flex justify-content-center">
+        <div class="p-2">
+            <a class="btn btn-primary" routerLink=""><i class="fas fa-arrow-left"></i> Back to the Store</a>        
+        </div>
+        <div class="p-2">
+            <a class="btn btn-primary" routerLink="">Continue with Checkout <i class="fas fa-arrow-right"></i></a> 
+        </div>
+    </div>
+</ng-template>
+<ng-template #empty> 
+    <div class="d-flex justify-content-center mt-5">
+        <a class="btn btn-primary" routerLink="/travels"><i class="fas fa-arrow-left"></i> Back to the Store</a>   
+    </div>
+    <div class="d-flex justify-content-center mt-2">
+        <h1>
+Your cart is empty
+    </h1>
+</div>   
+</ng-template>
+</div>
+</main>
