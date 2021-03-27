@@ -16,3 +16,20 @@ header {
     height: 250px;
     text-shadow: 1px 0px 1px rgba(150, 150, 150, 1);
 }
+
+.verticalimg {
+    position: relative;
+    overflow: hidden;
+    img {
+        width: 160%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+    }
+}
+
+.accordion-item {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
