@@ -1,4 +1,4 @@
-# FE21CR6MichaelR
+# FE21-CR6-MichaelR
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
 
@@ -25,3 +25,18 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+For this CodeReview, the following criteria were graded:
+- Create a GitHub Repository named: FE21-CR6-Name. Push the files into it and send the link through the learning management system (lms). See an example of a GitHub link below:
+https://github.com/JohnDoe/repositoryname.git.
+- Implement theme design 
+- Your project must contain at least 5 components that together should build up your project
+- Use routing to move between the pages. E.g.: your navbar contains 3 navigation links: Home, Blog and Travels. When you click Home you should see the content for the homepage. When you click Blog you should see the content for the Blog page and the Travels page will show all travel offers.
+- Each travel offer should display the following details: destination, description, start date(s), duration and price. 
+- Create the functionality that when you click on a travel offer in the travel section, it will be added to your cart.
+- Display the shopping cart in a separate component.
+
+Bonus Points:
+- Display the final sum of all the offers the users have selected(i.e Total costs)
+- If the total sum is more than EUR 200,-, the users get a 10% discount. If the total sum is more than EUR 500,-, then it is a 20% discount.
+
